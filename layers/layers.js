@@ -1,68 +1,88 @@
 var wms_layers = [];
 
 
-        var lyr_OpenStreetMapmonochrome_0 = new ol.layer.Tile({
-            'title': 'OpenStreetMap monochrome',
+        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+            'title': 'OpenStreetMap',
             'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
     attributions: ' ',
-                url: 'http://a.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
-var format_COMMUNE_1 = new ol.format.GeoJSON();
-var features_COMMUNE_1 = format_COMMUNE_1.readFeatures(json_COMMUNE_1, 
+var format_contourMMM_20210302_geofabrik_1 = new ol.format.GeoJSON();
+var features_contourMMM_20210302_geofabrik_1 = format_contourMMM_20210302_geofabrik_1.readFeatures(json_contourMMM_20210302_geofabrik_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_COMMUNE_1 = new ol.source.Vector({
+var jsonSource_contourMMM_20210302_geofabrik_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_COMMUNE_1.addFeatures(features_COMMUNE_1);
-var lyr_COMMUNE_1 = new ol.layer.Vector({
+jsonSource_contourMMM_20210302_geofabrik_1.addFeatures(features_contourMMM_20210302_geofabrik_1);
+var lyr_contourMMM_20210302_geofabrik_1 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_COMMUNE_1, 
-                style: style_COMMUNE_1,
+                source:jsonSource_contourMMM_20210302_geofabrik_1, 
+                style: style_contourMMM_20210302_geofabrik_1,
                 interactive: true,
-    title: 'COMMUNE<br />\
-    <img src="styles/legend/COMMUNE_1_0.png" /> Bazouges-sur-le-Loir<br />\
-    <img src="styles/legend/COMMUNE_1_1.png" /> Bousse<br />\
-    <img src="styles/legend/COMMUNE_1_2.png" /> Clermont-Créans<br />\
-    <img src="styles/legend/COMMUNE_1_3.png" /> Cré<br />\
-    <img src="styles/legend/COMMUNE_1_4.png" /> Crosmières<br />\
-    <img src="styles/legend/COMMUNE_1_5.png" /> La Flèche<br />\
-    <img src="styles/legend/COMMUNE_1_6.png" /> Le Bailleul<br />\
-    <img src="styles/legend/COMMUNE_1_7.png" /> Ligron<br />\
-    <img src="styles/legend/COMMUNE_1_8.png" /> Mareil-sur-Loir<br />\
-    <img src="styles/legend/COMMUNE_1_9.png" /> Villaines-sous-Malicorne<br />\
-    <img src="styles/legend/COMMUNE_1_10.png" /> <br />'
-        });
-var format_CHEF_LIEU_2 = new ol.format.GeoJSON();
-var features_CHEF_LIEU_2 = format_CHEF_LIEU_2.readFeatures(json_CHEF_LIEU_2, 
+                title: '<img src="styles/legend/contourMMM_20210302_geofabrik_1.png" /> contourMMM_20210302_geofabrik'
+            });
+var format_31communesMontpellier_20210301_geofabrik_2 = new ol.format.GeoJSON();
+var features_31communesMontpellier_20210301_geofabrik_2 = format_31communesMontpellier_20210301_geofabrik_2.readFeatures(json_31communesMontpellier_20210301_geofabrik_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_CHEF_LIEU_2 = new ol.source.Vector({
+var jsonSource_31communesMontpellier_20210301_geofabrik_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_CHEF_LIEU_2.addFeatures(features_CHEF_LIEU_2);cluster_CHEF_LIEU_2 = new ol.source.Cluster({
-  distance: 10,
-  source: jsonSource_CHEF_LIEU_2
-});
-var lyr_CHEF_LIEU_2 = new ol.layer.Vector({
+jsonSource_31communesMontpellier_20210301_geofabrik_2.addFeatures(features_31communesMontpellier_20210301_geofabrik_2);
+var lyr_31communesMontpellier_20210301_geofabrik_2 = new ol.layer.Vector({
                 declutter: true,
-                source:cluster_CHEF_LIEU_2, 
-                style: style_CHEF_LIEU_2,
+                source:jsonSource_31communesMontpellier_20210301_geofabrik_2, 
+                style: style_31communesMontpellier_20210301_geofabrik_2,
                 interactive: true,
-                title: '<img src="styles/legend/CHEF_LIEU_2.png" /> CHEF_LIEU'
+                title: '<img src="styles/legend/31communesMontpellier_20210301_geofabrik_2.png" /> 31communesMontpellier_20210301_geofabrik'
+            });
+var format_Mask_3 = new ol.format.GeoJSON();
+var features_Mask_3 = format_Mask_3.readFeatures(json_Mask_3, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_Mask_3 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Mask_3.addFeatures(features_Mask_3);
+var lyr_Mask_3 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_Mask_3, 
+                style: style_Mask_3,
+                interactive: true,
+                title: 'Mask'
+            });
+var format_fichier_1_bureau1_4 = new ol.format.GeoJSON();
+var features_fichier_1_bureau1_4 = format_fichier_1_bureau1_4.readFeatures(json_fichier_1_bureau1_4, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_fichier_1_bureau1_4 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_fichier_1_bureau1_4.addFeatures(features_fichier_1_bureau1_4);
+var lyr_fichier_1_bureau1_4 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_fichier_1_bureau1_4, 
+                style: style_fichier_1_bureau1_4,
+                interactive: true,
+                title: 'fichier_1_bureau1'
             });
 
-lyr_OpenStreetMapmonochrome_0.setVisible(true);lyr_COMMUNE_1.setVisible(true);lyr_CHEF_LIEU_2.setVisible(true);
-var layersList = [lyr_OpenStreetMapmonochrome_0,lyr_COMMUNE_1,lyr_CHEF_LIEU_2];
-lyr_COMMUNE_1.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'Nom de la commune', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'Population', 'MULTICAN': 'MULTICAN', });
-lyr_CHEF_LIEU_2.set('fieldAliases', {'ID': 'ID', 'ID_COM': 'ID_COM', 'ORIGIN_NOM': 'ORIGIN_NOM', 'NATURE': 'NATURE', 'NOM': 'NOM', 'IMPORTANCE': 'IMPORTANCE', });
-lyr_COMMUNE_1.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_CHEF_LIEU_2.set('fieldImages', {'ID': 'TextEdit', 'ID_COM': 'TextEdit', 'ORIGIN_NOM': 'TextEdit', 'NATURE': 'TextEdit', 'NOM': 'TextEdit', 'IMPORTANCE': 'TextEdit', });
-lyr_COMMUNE_1.set('fieldLabels', {'ID': 'no label', 'PREC_PLANI': 'no label', 'NOM': 'header label', 'CODE_INSEE': 'no label', 'STATUT': 'no label', 'CANTON': 'inline label', 'ARRONDISST': 'inline label', 'DEPART': 'no label', 'REGION': 'inline label', 'POPUL': 'inline label', 'MULTICAN': 'header label', });
-lyr_CHEF_LIEU_2.set('fieldLabels', {'ID': 'no label', 'ID_COM': 'no label', 'ORIGIN_NOM': 'header label', 'NATURE': 'header label', 'NOM': 'header label', 'IMPORTANCE': 'no label', });
-lyr_CHEF_LIEU_2.on('precompose', function(evt) {
+lyr_OpenStreetMap_0.setVisible(true);lyr_contourMMM_20210302_geofabrik_1.setVisible(true);lyr_31communesMontpellier_20210301_geofabrik_2.setVisible(true);lyr_Mask_3.setVisible(true);lyr_fichier_1_bureau1_4.setVisible(true);
+var layersList = [lyr_OpenStreetMap_0,lyr_contourMMM_20210302_geofabrik_1,lyr_31communesMontpellier_20210301_geofabrik_2,lyr_Mask_3,lyr_fichier_1_bureau1_4];
+lyr_contourMMM_20210302_geofabrik_1.set('fieldAliases', {'ID': 'ID', 'NOM_COM': 'NOM_COM', 'NOM_COM_M': 'NOM_COM_M', 'INSEE_COM': 'INSEE_COM', 'STATUT': 'STATUT', 'POPULATION': 'POPULATION', 'INSEE_CAN': 'INSEE_CAN', 'INSEE_ARR': 'INSEE_ARR', 'INSEE_DEP': 'INSEE_DEP', 'INSEE_REG': 'INSEE_REG', 'CODE_EPCI': 'CODE_EPCI', });
+lyr_31communesMontpellier_20210301_geofabrik_2.set('fieldAliases', {'ID': 'ID', 'NOM_COM': 'NOM_COM', 'NOM_COM_M': 'NOM_COM_M', 'INSEE_COM': 'INSEE_COM', 'STATUT': 'STATUT', 'POPULATION': 'POPULATION', 'INSEE_CAN': 'INSEE_CAN', 'INSEE_ARR': 'INSEE_ARR', 'INSEE_DEP': 'INSEE_DEP', 'INSEE_REG': 'INSEE_REG', 'CODE_EPCI': 'CODE_EPCI', });
+lyr_Mask_3.set('fieldAliases', {'params:(0,0)': 'params:(0,0)', });
+lyr_fichier_1_bureau1_4.set('fieldAliases', {'ID_PC': 'ID_PC', 'DENOMINATI': 'DENOMINATI', 'CAT_MOA': 'CAT_MOA', 'ADR_T_F2': 'ADR_T_F2', 'ADR_CP_T2': 'ADR_CP_T2', 'ADR_LOCALI': 'ADR_LOCALI', 'PAYS_T2': 'PAYS_T2', 'Somme de B': 'Somme de B', 'ID parcell': 'ID parcell', 'altitude': 'altitude', 'longitude': 'longitude', 'latitude': 'latitude', 'ID adresse': 'ID adresse', 'precision': 'precision', 'qualite': 'qualite', 'adresse ge': 'adresse ge', 'Position': 'Position', 'POSITION_N': 'POSITION_N', });
+lyr_contourMMM_20210302_geofabrik_1.set('fieldImages', {'ID': '', 'NOM_COM': '', 'NOM_COM_M': '', 'INSEE_COM': '', 'STATUT': '', 'POPULATION': '', 'INSEE_CAN': '', 'INSEE_ARR': '', 'INSEE_DEP': '', 'INSEE_REG': '', 'CODE_EPCI': '', });
+lyr_31communesMontpellier_20210301_geofabrik_2.set('fieldImages', {'ID': '', 'NOM_COM': '', 'NOM_COM_M': '', 'INSEE_COM': '', 'STATUT': '', 'POPULATION': '', 'INSEE_CAN': '', 'INSEE_ARR': '', 'INSEE_DEP': '', 'INSEE_REG': '', 'CODE_EPCI': '', });
+lyr_Mask_3.set('fieldImages', {'params:(0,0)': '', });
+lyr_fichier_1_bureau1_4.set('fieldImages', {'ID_PC': 'TextEdit', 'DENOMINATI': 'TextEdit', 'CAT_MOA': 'TextEdit', 'ADR_T_F2': 'TextEdit', 'ADR_CP_T2': 'TextEdit', 'ADR_LOCALI': 'TextEdit', 'PAYS_T2': 'TextEdit', 'Somme de B': 'TextEdit', 'ID parcell': 'TextEdit', 'altitude': 'TextEdit', 'longitude': 'TextEdit', 'latitude': 'TextEdit', 'ID adresse': 'TextEdit', 'precision': 'TextEdit', 'qualite': 'TextEdit', 'adresse ge': 'TextEdit', 'Position': 'TextEdit', 'POSITION_N': 'TextEdit', });
+lyr_contourMMM_20210302_geofabrik_1.set('fieldLabels', {'ID': 'no label', 'NOM_COM': 'no label', 'NOM_COM_M': 'no label', 'INSEE_COM': 'no label', 'STATUT': 'no label', 'POPULATION': 'no label', 'INSEE_CAN': 'no label', 'INSEE_ARR': 'no label', 'INSEE_DEP': 'no label', 'INSEE_REG': 'no label', 'CODE_EPCI': 'no label', });
+lyr_31communesMontpellier_20210301_geofabrik_2.set('fieldLabels', {'ID': 'no label', 'NOM_COM': 'no label', 'NOM_COM_M': 'no label', 'INSEE_COM': 'no label', 'STATUT': 'no label', 'POPULATION': 'no label', 'INSEE_CAN': 'no label', 'INSEE_ARR': 'no label', 'INSEE_DEP': 'no label', 'INSEE_REG': 'no label', 'CODE_EPCI': 'no label', });
+lyr_Mask_3.set('fieldLabels', {'params:(0,0)': 'no label', });
+lyr_fichier_1_bureau1_4.set('fieldLabels', {'ID_PC': 'header label', 'DENOMINATI': 'inline label', 'CAT_MOA': 'no label', 'ADR_T_F2': 'no label', 'ADR_CP_T2': 'no label', 'ADR_LOCALI': 'no label', 'PAYS_T2': 'no label', 'Somme de B': 'no label', 'ID parcell': 'no label', 'altitude': 'no label', 'longitude': 'no label', 'latitude': 'no label', 'ID adresse': 'no label', 'precision': 'no label', 'qualite': 'no label', 'adresse ge': 'no label', 'Position': 'no label', 'POSITION_N': 'no label', });
+lyr_fichier_1_bureau1_4.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
